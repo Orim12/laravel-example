@@ -10,7 +10,7 @@ class Job extends Model
     use HasFactory;
 
     // Optioneel: geef aan welke velden mass-assignable zijn
-    protected $fillable = ['title', 'salary'];
+    protected $fillable = ['title', 'salary', 'employer_id'];
 
     public function employer()
     {

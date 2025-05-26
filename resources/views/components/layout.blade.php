@@ -27,8 +27,14 @@
             </ul>
         </nav>
         @isset($heading)
-            <header>
-                {{ $heading }}
+            <header class="flex items-center justify-between mb-6">
+                <div>
+                    {{ $heading }}
+                </div>
+                <a href="/jobs/create"
+                   class="inline-block px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition text-sm font-semibold">
+                    Create Job
+                </a>
             </header>
         @endisset
         {{ $slot }}
