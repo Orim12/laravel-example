@@ -17,6 +17,12 @@ class Job extends Model
         return $this->belongsTo(Employer::class);
     }
 
+    public function user()
+    {
+        // Via employer naar user
+        return $this->employer ? $this->employer->user : null;
+    }
+
     public function tags()
     {
         return $this->belongsToMany(
